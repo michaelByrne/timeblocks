@@ -9,5 +9,6 @@
     <orderEntry type="library" name="angularfire" level="application" />
     <orderEntry type="library" name="angular-resource" level="application" />
     <orderEntry type="library" name="aws-sdk-2.1.12" level="application" />
+    <orderEntry type="library" name="angular" level="application" />
   </component>
 </module>
