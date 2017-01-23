@@ -2,10 +2,14 @@
   "name": "starter-node-angular",
   "main": "server.js",
   "dependencies": {
-    "express" : "~4.5.1",
-	"mongoose" : "~3.8.0",
-	"body-parser" : "~1.4.2",
-	"method-override" : "~2.0.2"
+    "angular": "^1.6.1",
+    "angularfire": "^2.2.0",
+    "body-parser": "~1.4.2",
+    "express": "~4.5.1",
+    "formidable": "^1.1.1",
+    "fs": "0.0.1-security",
+    "method-override": "~2.0.2",
+    "mongoose": "^4.5.8",
+    "multer": "^1.2.1"
   }
 }
-

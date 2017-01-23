@@ -1,0 +1,25 @@
+<div class="col-md-5">
+  <form novalidate class="simple-form" style="float: left" name="entry">
+    <label>title: <input type="text" name="hed" ng-model="story.title" /></label>
+    <span style="color: red" ng-show="entry.hed.$touched && entry.hed.$invalid">title required doofus</span><br>
+    <label>tag: <input type="text" name="tag" ng-model="story.tag" /></label>
+    <span style="color: red" ng-show="entry.tag.$touched && entry.tag.$invalid">tag required idiot</span><br>
+    <label><textarea rows="15" cols="40" name="tease" ng-model="story.tease" >preview</textarea></label><br>
+    <span style="color: red" ng-show="entry.tease.$touched && entry.tease.$invalid">tease required jerk</span><br>
+    <label for="exampleInputFile">asdf</label>
+    <input id="exampleInputFile" type="file" file-model="story.image" />
+    <label><input type="submit" ng-click="submit()" value="Save"/></label>
+    {{ story.title }} {{ story.tag }} {{ story.tease }}
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+

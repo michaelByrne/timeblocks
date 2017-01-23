@@ -1,0 +1,19 @@
+<!--<div ng-repeat="photo in photos" class="col-md-5">-->
+<!--<div>{{ $index }}</div>-->
+<!--</div>-->
+
+
+<div class="col-md-1" style="width: 30px">
+  <div class="btn-toolbar" role="toolbar" style="margin-left: 5px">
+    <div class="btn-group-vertical" role="group" id="btns" data-toggle="buttons">
+      <button type="radio" class="btn btn-secondary" ng-repeat="photo in photos" id="img-btn-{{ $index }}" ng-click="setSelectedPhoto(photo, $index)" ng-class="buttons[$index]">{{ $index }}
+      </button>
+    </div>
+    <br><br>
+  </div>
+</div>
+
+<div class="col-md-10">
+  <img ng-src="{{ photos[selected].url_c }}">
+  <p>{{ photos[selected].title }}</p>
+</div>

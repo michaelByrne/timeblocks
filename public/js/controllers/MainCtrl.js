@@ -1,5 +1,7 @@
-angular.module('MainCtrl', []).controller('MainController', function($scope) {
+angular.module('elkApp').controller('MainController', function($scope) {
 
-	$scope.tagline = 'To the moon and back!';	
+	$scope.mainImage = ['../../images/virgin.jpg', '../../images/bluesilk.jpg','../../images/green.jpg'];
+    $scope.imDex = Math.floor((Math.random() * 3));
+
 
 });

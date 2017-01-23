@@ -1,0 +1,10 @@
+<div ng-repeat="story in content">
+  <div class="col-md-3 story">
+    <div class="story-content">
+      <h6 style="color: #58889D">{{ story.tag }}</h6>
+      <div class="story-title"><a href="#" target="_blank" style="color: darkgray"><h4>{{ story.title }}</h4></a></div>
+      <img ng-src="{{ story.img }}" class="img-responsive">
+      <div class="blurb">{{ story.tease }}</div>
+    </div>
+  </div>
+</div>

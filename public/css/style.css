@@ -1,1 +1,145 @@
-body { padding-top:30px; }
+
+* {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+body {
+    padding-left: 50px;
+    color: #959595;
+}
+
+.container{
+    margin-left: inherit;
+}
+
+#top-bar {
+    padding-left: 100px;
+    margin-top: 15px;
+}
+
+#front-image{
+    padding-left: 60px;
+}
+
+li {
+    width: 100%;
+}
+
+.navbar-nav {
+    float: none;
+    margin: 0;
+}
+
+.blurb {
+    color: black;
+}
+
+#push {
+    min-height: 200px;
+}
+
+.here {
+    background-color: darkgray;
+}
+
+.crop {
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding-right: 10px;
+}
+
+.navbar {
+    border: none;
+}
+
+.btn-secondary.active {
+    color: lightgray;
+    background-color: lightslategray;
+}
+
+.btn-secondary.unchecked {
+
+}
+
+
+.editable-click {
+    border-bottom: none;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    opacity: .7;
+}
+
+.col-md-1 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#twitterOn, #twitterOff {
+    background-color: white;
+    width: 100%;
+
+}
+
+#tlogo {
+    margin: auto;
+    padding-left: 5px;
+
+}
+
+.col-md-3 {
+    padding: 0px;
+
+}
+
+.story {
+    height: 400px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.story-content {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.dash-panel {
+    border: #000000;
+    background-color: #afd9ee;
+    margin: 5px;
+    padding: 5px;
+}
+
+body {
+    padding-top: 0;
+}
+
+h2 {
+    margin-bottom: 1.2rem;
+    float: left;
+    padding-left: .8rem;
+}
+
+.albumImage img {
+    margin-bottom: .4rem;
+}
+
+.angLogo {
+    float: left;
+    width: 34px;
+    padding-top: 1.9rem;
+}
+
+.badge .glyphicon {
+    padding-right: .4rem;
+}
+
+label, select {
+    float: right;
+    margin-left: 1rem;
+}
