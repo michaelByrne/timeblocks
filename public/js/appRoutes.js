@@ -22,8 +22,7 @@ angular.module('elkApp')
         })
 
         .when('/photos', {
-            templateUrl: 'views/photo.html',
-            controller: 'PhotoController'
+            template: '<photos></photos>'
         })
 
         .when('/admin', {
