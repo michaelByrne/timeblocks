@@ -19,6 +19,7 @@ var upload = multer({ storage: storage });
 router.get('/', function(req, res, next) {
     Story.find(function (err, todos) {
         if (err) return next(err);
+        console.log(todos);
         res.json(todos);
     });
 });
