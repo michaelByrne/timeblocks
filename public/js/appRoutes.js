@@ -45,7 +45,7 @@ angular.module('elkApp')
                 template: '<login logged="$resolve.currentAuth"></login>',
                 resolve: {
                     currentAuth: function (auth) {
-                        console.log(!!auth.$waitForSignIn());
+                        //console.log(!!auth.$waitForSignIn());
                         return auth.$waitForSignIn();
                     },
                     testAuth: function () {

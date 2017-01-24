@@ -5,5 +5,5 @@
   <button class="btn btn-primary" ng-show="$ctrl.logged" ng-click="$ctrl.fbLogOut()">fb-out</button>
   <!--<button class="btn btn-primary" ng-click="$ctrl.anonLogin()">anony-mouse</button>-->
   <br><br>
-  <div class="alert alert-danger" ng-show="!!$ctrl.errorMessage">{{ errorMessage }}</div>
+  <div class="alert alert-danger" ng-show="!!$ctrl.errorMessage">{{ $ctrl.errorMessage }}</div>
 </div>

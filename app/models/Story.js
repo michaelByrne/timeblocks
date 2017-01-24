@@ -4,6 +4,7 @@ var StorySchema = new mongoose.Schema({
 	tag: String,
 	tease: String,
 	img: String,
+    url: String,
 	updated_at: { type: Date, default: Date.now },
 });
 module.exports = mongoose.model('Story', StorySchema);

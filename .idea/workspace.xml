@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae164cd4-5363-458a-bd6c-b7d6e357a049" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/contact.html" afterPath="$PROJECT_DIR$/public/views/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Story.js" afterPath="$PROJECT_DIR$/app/models/Story.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/appRoutes.js" afterPath="$PROJECT_DIR$/public/js/appRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/security/login.html" afterPath="$PROJECT_DIR$/public/security/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/admin.html" afterPath="$PROJECT_DIR$/public/views/admin.html" />
     </list>
     <ignored path="byrne-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,43 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <file leaf-file-name="Story.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/Story.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1624">
-              <caret line="119" column="1" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Word.Ctrl.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/controllers/Word.Ctrl.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/security/login.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-              <folding>
-                <marker date="1485211377000" expanded="true" signature="105:1033" placeholder="{&quot;templateUrl&quot;: 'security/login.html'...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stories.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/stories.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="90">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -85,17 +56,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+            <state relative-caret-position="135">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/security/auth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/security/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/appRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/security/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logout.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/security/logout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/views/contact.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -134,17 +155,17 @@
         <option value="$PROJECT_DIR$/public/js/appDirectives.js" />
         <option value="$PROJECT_DIR$/app/routes/stories.js" />
         <option value="$PROJECT_DIR$/public/js/services/Admin.Service.js" />
-        <option value="$PROJECT_DIR$/app/models/Story.js" />
         <option value="$PROJECT_DIR$/public/views/writing.html" />
-        <option value="$PROJECT_DIR$/public/views/admin.html" />
         <option value="$PROJECT_DIR$/public/js/fbUrl.js" />
         <option value="$PROJECT_DIR$/public/security/auth.js" />
-        <option value="$PROJECT_DIR$/public/security/login.html" />
         <option value="$PROJECT_DIR$/public/security/logout.js" />
-        <option value="$PROJECT_DIR$/public/js/appRoutes.js" />
         <option value="$PROJECT_DIR$/public/security/login.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/views/contact.html" />
+        <option value="$PROJECT_DIR$/app/models/Story.js" />
+        <option value="$PROJECT_DIR$/public/views/admin.html" />
+        <option value="$PROJECT_DIR$/public/js/appRoutes.js" />
+        <option value="$PROJECT_DIR$/public/security/login.html" />
       </list>
     </option>
   </component>
@@ -251,7 +272,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="security" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,7 +290,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -283,11 +304,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="byrne-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="byrne-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,12 +432,12 @@
       <updated>1483344417184</updated>
       <workItem from="1483344418375" duration="1400000" />
       <workItem from="1484192419677" duration="46148000" />
-      <workItem from="1484696175037" duration="44468000" />
+      <workItem from="1484696175037" duration="44918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92016000" />
+    <option name="totallyTimeSpent" value="92466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="601" y="-1022" width="1547" height="710" extended-state="0" />
@@ -693,31 +728,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Story.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/views/writing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/views/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#1;n#form#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#2;n#form#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,36 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/security/logout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/security/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <marker date="1485211377000" expanded="true" signature="105:1033" placeholder="{&quot;templateUrl&quot;: 'security/login.html'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/services/Admin.Service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers/Admin.Ctrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -779,37 +768,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/appRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/fbUrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/security/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/security/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -863,6 +826,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Story.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers/Admin.Ctrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/security/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/security/logout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/security/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/appRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/security/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
