@@ -58,6 +58,6 @@ angular.module('elkApp')
         .when('/logout', {
             template: '<logout></logout>'
         });
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode({enabled: true});
 
 }]);

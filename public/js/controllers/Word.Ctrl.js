@@ -1,4 +1,4 @@
-angular.module('elkApp').controller('WordController', function ($scope, Word) {
+angular.module('elkApp').controller('WordController', function ($scope, Word, $location) {
     activate();
 
     function activate() {
