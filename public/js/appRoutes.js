@@ -39,6 +39,10 @@ angular.module('elkApp')
             template: '<contact></contact>'
         })
 
+        .when('/projects', {
+            template: '<projects></projects>'
+        })
+
         .when('/login',
             {
                 template: '<login logged="$resolve.currentAuth"></login>',
