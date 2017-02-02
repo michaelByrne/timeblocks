@@ -71,8 +71,16 @@
               return color(data.get(d.properties.abbr)[0])
             })
             .attr('d', path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide);
+            //.on('mouseover', tip.show)
+            .on('mouseover', function(d){
+              tip.show(d);
+              d3.select(this).attr('stroke', '#000').attr('stroke-width','2.5px');
+            })
+            .on('mouseout', function(d){
+              tip.hide(d);
+              d3.select(this).attr('stroke', 'none');
+            });
+
     svg.selectAll('.place-label')
             .data(d.features)
             .enter()
@@ -129,30 +137,6 @@
           .call(yAxis);
 
 
-  // var tl = new TimeLineLite();
-  // var intro = ('#intro');
-  // var map = ('#map');
-  // var legend = ('#legend');
-  // var footer = ('#footer');
-
-  // tl.from(intro, 1, {
-  //   y: '95%',
-  //   scale: .98,
-  //   ease: Power1.easeInOut,
-  //   autoAlpha: 0
-  // }).from(map, .75, {
-  //   y: '95%',
-  //   autoAlpha: 0
-  // }, '+=.5')
-  // .from(legend, .75, {
-  //   x: 1000,
-  //   autoAlpha: 0
-  // }, '-=.75')
-  // .from(footer, .75, {
-  //   y: '95%',
-  //   scale: .9,
-  //   autoAlpha
-  // });
 </script>
 
 
