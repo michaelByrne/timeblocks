@@ -11,5 +11,9 @@
     <orderEntry type="library" name="aws-sdk-2.1.12" level="application" />
     <orderEntry type="library" name="angular" level="application" />
     <orderEntry type="library" name="angular-route" level="application" />
+    <orderEntry type="library" name="d3-tip" level="application" />
+    <orderEntry type="library" name="TweenMax" level="application" />
+    <orderEntry type="library" name="queue.v1" level="application" />
+    <orderEntry type="library" name="d3" level="application" />
   </component>
 </module>

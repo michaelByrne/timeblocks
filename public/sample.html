@@ -1,126 +1,159 @@
 <head>
-  <style>
-    body{
-      background-color: #00264d;
-    }
-    .land {
-      fill: #00264d;
-      stroke: none;
-    }
-
-    .state {
-      fill: white;
-      stroke: #666;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>
+<section id="intro">
+  <h1>Climate Representation in the United States 2017</h1>
+</section>
+
+<div id="map"></div>
+<div id="legend"></div>
 <script>
-//  var valueById = [ 0.11875   ,  0.1       ,  0.13      ,  0.125     ,  0.17777778,
-//  0.14444444,  0.2       ,  0.2       ,  0.16206897,  0.12666667,
-//  0.2       ,  0.1125    ,  0.1675    ,  0.13636364,  0.11666667,
-//  0.12      ,  0.125     ,  0.15      ,  0.1625    ,  0.19      ,
-//  0.2       ,  0.16875   ,  0.16      ,  0.13333333,  0.14      ,
-//  0.13333333,  0.13      ,  0.16666667,  0.2       ,  0.18214286,
-//  0.18      ,  0.18103448,  0.12666667,  0.1       ,  0.15      ,
-//  0.10714286,  0.19285714,  0.14      ,     0.2       ,  0.1375    ,
-//  0.13333333,  0.14545455,  0.14210526,  1.10833333,  0.2       ,
-//  0.15769231,  0.17916667,  0.11      ,  0.14      ,  0.1       ];
 
-var valueById = [
-  NaN,
-  .1187, //al .187
-  .03, //ak .00
-  NaN,
-  .13, //az .300
-  .125, //ar .2500
-  .18, //ca .777
-  NaN,
-  .144, //co .444
-  .2, //ct 1.0
-  .2, //de 1.0
-  NaN,
-  .161, //fl .620690
-  .127, //ga .2667
-  NaN,
-  .2, //hi 1.0
-  .113, //id .125
-  .168, //il .6750
-  .136, //in .3636
-  .117, //ia .1667
-  .12, //ks .200
-  .125, //ky .25
-  .15, //la .5000
-  .163, //me .625
-  .19, //md .900
-  .2, //ma 1.0
-  .169, //mi .168
-  .16, //mn .600
-  .13, //ms .333
-  .14, //mo .400
-  .133, //mt .333
-  .13, //ne .300
-  .166, //nv .666
-  .2, //nh 1
-  .18, //nj .8
-  .180, //nm .800
-  .181, //ny .810
-  .16, //nc .6666
-  .03, //nd 00
-  .15, //oh .5
-  .107, //ok .0714
-  .193, //or .9285
-  .14, //pa .400
-  NaN,
-  .2, //rh 1.0
-  .138, //sc .375
-  .133, //sd .333
-  .145, //tn
-  .142, //tx .421
-  .108, //ut .083
-  .2, //vt 1
-  .158, //va .5769
-  NaN,
-  .179, //wa .791
-  .101, //wv .1
-  .14, //wi .4
-  .05  //wy 0
-];
-console.log(valueById.length);
 
-var path = d3.geo.path();
-var counter = 0;
+  var width = 700;
+  var height = 400;
+  var svg = d3.select("#map")
+          .append("svg")
+          .attr("width", width)
+          .attr("height", height);
 
-var svg = d3.select("body").append("svg")
-        .attr("width", 960)
-        .attr("height", 500);
 
-d3.json("us.json", function (error, us) {
-  if (error) throw error;
-  svg.append("path")
-          .datum(topojson.feature(us, us.objects.land))
-          .attr("class", "land")
-          .attr("d", path);
+  var colorScale = ['#F64710', '#FFD4A6'];
+  var color = d3.scale.linear()
+          .domain([0.0, 1.0])
+          .range(colorScale);
+  var data = d3.map();
+  console.log(data);
+  var projection = d3.geo.equirectangular()
+          .center([-96.03542, 41.69553])
+          .scale(2000)
+          .translate([width / 2, height / 2]);
 
-  svg.selectAll(".state")
-          .data(topojson.feature(us, us.objects.states).features)
-          .enter().append("path")
-          .attr("class", "state")
-          .attr("d", path)
-          .attr("transform", function (d) {
-            var w = valueById[d.id];
-            var centroid = path.centroid(d),
-                    x = centroid[0],
-                    y = centroid[1];
-            return "translate(" + x + "," + y + ")"
-                    + "scale(" + Math.sqrt(w * (w*25) || 0) + ")"
-                    + "translate(" + -x + "," + -y + ")";
-          })
-          .style("stroke-width", function (d) {
-            return 0;
+  var path = d3.geo.path()
+          .projection(projection);
+
+  var tip = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-20, 0])
+          .html(function (d) {
+            console.log(data.get(d.properties.abbr));
+            return "<strong>" + d.properties.name + "<br> </strong><span> Total congressional seats: " + data.get(d.properties.abbr)[1] +
+                    "<br>Votes against climate change legislation: " + data.get(d.properties.abbr)[2] +
+                    "<br>Denies climate change exists: " + data.get(d.properties.abbr)[3] +
+                    "<br>Total climate score: " + data.get(d.properties.abbr)[0]*100 + "</span><br>"
           });
-});</script>
+
+  queue()
+          .defer(d3.json, "http://rawgit.com/geobabbler/us-state-squares/380435e6d7295251519797ecc38d3ee91fb05a01/state_squares.geojson")
+          .defer(d3.csv, "data.csv", function (d) {
+            data.set(d.state, [d.ratio, d.total, d.vote, d.deny]);
+          })
+          .await(ready);
+
+  function ready(error, d) {
+    svg.append('g')
+            .attr('class', 'states')
+            .selectAll('path')
+            .data(d.features)
+            .enter()
+            .append('path')
+            .attr('class', function (d) {
+              return d.properties.abbr;
+            })
+            .attr('fill', function (d) {
+              return color(data.get(d.properties.abbr)[0])
+            })
+            .attr('d', path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide);
+    svg.selectAll('.place-label')
+            .data(d.features)
+            .enter()
+            .append('text')
+            .attr('class', 'place-label')
+            .attr('transform', function (d) {
+              return 'translate(' + path.centroid(d) + ')';
+            })
+            .attr('dy', '.5em')
+            .attr('dx', '-.7em')
+            .text(function (d) {
+              return d.properties.abbr;
+            })
+  }
+
+  svg.call(tip);
+
+  var w = 285, h = 40;
+  var key = d3.select('#legend')
+          .append('svg')
+          .attr('width', w)
+          .attr('height', h);
+
+  var legend = key.append('defs')
+          .append('svg:linearGradient')
+          .attr('id', 'gradient')
+          .attr('y1', '100%')
+          .attr('x1', '0%')
+          .attr('y2', '100%')
+          .attr('x2', '100%')
+  legend.append('stop')
+          .attr('offset', '0%')
+          .attr('stop-color', colorScale[0])
+  legend.append('stop')
+          .attr('offset', '100%')
+          .attr('stop-color', colorScale[1])
+  key.append('rect')
+          .attr('width', w - 10)
+          .attr('height', h - 20)
+          .style('fill', 'url(#gradient)')
+          .attr('transform', 'translate(0,20)');
+
+
+  var y = d3.scale.linear()
+          .range([0, 250])
+          .domain([0, 100]);
+
+  var yAxis = d3.svg.axis()
+          .scale(y)
+          .ticks(4);
+  key.append('g')
+          .attr('class', 'y axis')
+          .attr('transform', 'translate(10,15)')
+          .call(yAxis);
+
+
+  // var tl = new TimeLineLite();
+  // var intro = ('#intro');
+  // var map = ('#map');
+  // var legend = ('#legend');
+  // var footer = ('#footer');
+
+  // tl.from(intro, 1, {
+  //   y: '95%',
+  //   scale: .98,
+  //   ease: Power1.easeInOut,
+  //   autoAlpha: 0
+  // }).from(map, .75, {
+  //   y: '95%',
+  //   autoAlpha: 0
+  // }, '+=.5')
+  // .from(legend, .75, {
+  //   x: 1000,
+  //   autoAlpha: 0
+  // }, '-=.75')
+  // .from(footer, .75, {
+  //   y: '95%',
+  //   scale: .9,
+  //   autoAlpha
+  // });
+</script>
+
+
 </body>

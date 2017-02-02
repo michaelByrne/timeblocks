@@ -2,7 +2,8 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{byrne-app node_modules}" />
-    <file url="PROJECT" libraries="{angular, angular-resource, angular-route, angularfire, aws-sdk-2.1.12, firebase}" />
+    <file url="PROJECT" libraries="{TweenMax, angular, angular-resource, angular-route, angularfire, aws-sdk-2.1.12, d3, d3-tip, firebase, queue.v1}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
+    <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
