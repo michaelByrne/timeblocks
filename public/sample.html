@@ -45,8 +45,8 @@
           .html(function (d) {
             console.log(data.get(d.properties.abbr));
             return "<strong>" + d.properties.name + "<br> </strong><span> Total congressional seats: " + data.get(d.properties.abbr)[1] +
-                    "<br>Votes against climate change legislation: " + data.get(d.properties.abbr)[2] +
-                    "<br>Denies climate change exists: " + data.get(d.properties.abbr)[3] +
+                    "<br>Voted against climate change legislation: " + data.get(d.properties.abbr)[2] +
+                    "<br>Denied climate change exists: " + data.get(d.properties.abbr)[3] +
                     "<br>Total climate score: " + data.get(d.properties.abbr)[0]*100 + "</span><br>"
           });
 
