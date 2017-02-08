@@ -3,9 +3,8 @@ $w: 100%;
 $h: 100%;
 $font-stack: 'Raleway', Helvetica, sans-serif;
 $place-fill: #444;
-$tip-color: #e2e3e3;
 $gray: #666;
-$transparent: rgba(0,0,0,.7);
+$transparent: rgba(190, 196, 207,.9);
 body{
   width: $w;
   height: $h;
@@ -18,7 +17,7 @@ body{
 }
 #intro{
   width: $w;
-  border-bottom: 2px solid $gray;
+  border-bottom: 2px solid #E4E4E4;
 }
 
 
@@ -26,6 +25,7 @@ body{
 h1 {
   font: bold 2rem $font-stack;
   margin: 1rem auto 0;
+  color: #E4E4E4;
 }
 h2{
   font: 1rem $font-stack;
@@ -56,10 +56,7 @@ text {
 .states {
   fill: $gray;
 }
-.states :hover {
-  stroke: $gray;
-  stroke-width: 2.5px;
-}
+
 .place,
 .place-label {
   fill: $place-fill;
@@ -69,5 +66,6 @@ text {
   padding: 20px;
   text-align: left;
   background: $transparent;
-  color: $tip-color;
+  color: black;
+  max-width: 400px;
 }

@@ -50,6 +50,8 @@
                     "<br>Total climate score: " + data.get(d.properties.abbr)[0]*100 + "</span><br>"
           });
 
+
+
   queue()
           .defer(d3.json, "http://rawgit.com/geobabbler/us-state-squares/380435e6d7295251519797ecc38d3ee91fb05a01/state_squares.geojson")
           .defer(d3.csv, "data.csv", function (d) {
