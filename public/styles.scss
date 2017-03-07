@@ -5,6 +5,7 @@ $font-stack: 'Raleway', Helvetica, sans-serif;
 $place-fill: #444;
 $gray: #666;
 $transparent: rgba(190, 196, 207,.9);
+$border-trans: rgba(248, 99, 46,.7);
 body{
   width: $w;
   height: $h;
@@ -47,7 +48,9 @@ h2{
   fill: none;
 }
 #map{
-  margin-top: 7rem;
+  margin-top: 1rem;
+  border: 2px solid $border-trans;
+  padding: 35px 75px;
 }
 text {
   pointer-events: none;

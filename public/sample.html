@@ -8,12 +8,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 <script src="http://d3js.org/queue.v1.min.js"></script>
-<section id="intro">
-  <h1>Climate Representation in the United States 2017</h1>
-</section>
 
-<div id="map"></div>
-<div id="legend"></div>
+
+<div id="map">
+  <section id="intro" style="border-bottom: none">
+    <h1 style="color:black">Climate Representation in the United States 2017</h1>
+  </section>
+</div>
+
 <script>
 
 
@@ -27,7 +29,7 @@
 
   var colorScale = ['#F64710', '#FFD4A6'];
   var color = d3.scale.linear()
-          .domain([0.0, 1.0])
+          .domain([0.00, 0.9])
           .range(colorScale);
   var data = d3.map();
   console.log(data);
@@ -41,15 +43,14 @@
 
   var tip = d3.tip()
           .attr('class', 'd3-tip')
-          .offset([-20, 0])
+          .offset([0, 0])
           .html(function (d) {
             console.log(data.get(d.properties.abbr));
             return "<strong>" + d.properties.name + "<br> </strong><span> Total congressional seats: " + data.get(d.properties.abbr)[1] +
                     "<br>Voted against climate change legislation: " + data.get(d.properties.abbr)[2] +
                     "<br>Denied climate change exists: " + data.get(d.properties.abbr)[3] +
-                    "<br>Total climate score: " + data.get(d.properties.abbr)[0]*100 + "</span><br>"
+                    "<br>Total climate score: " + data.get(d.properties.abbr)[0] * 100 + "</span><br>"
           });
-
 
 
   queue()
@@ -70,15 +71,16 @@
               return d.properties.abbr;
             })
             .attr('fill', function (d) {
+              console.log(data.get(d.properties.abbr)[0]);
               return color(data.get(d.properties.abbr)[0])
             })
             .attr('d', path)
             //.on('mouseover', tip.show)
-            .on('mouseover', function(d){
+            .on('mouseover', function (d) {
               tip.show(d);
-              d3.select(this).attr('stroke', '#000').attr('stroke-width','2.5px');
+              d3.select(this).attr('stroke', '#000').attr('stroke-width', '2.5px');
             })
-            .on('mouseout', function(d){
+            .on('mouseout', function (d) {
               tip.hide(d);
               d3.select(this).attr('stroke', 'none');
             });

@@ -37,7 +37,9 @@ h2 {
   fill: none; }
 
 #map {
-  margin-top: 7rem; }
+  margin-top: 1rem;
+  border: 2px solid rgba(248, 99, 46, 0.7);
+  padding: 35px 75px; }
 
 text {
   pointer-events: none;

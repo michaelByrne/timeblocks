@@ -2,10 +2,11 @@
 <meta charset="utf-8">
 <title>MB Climate Map</title>
 <style>
-  body{
+  #hook {
 
     background-color: #1C2331;
   }
+
   .land {
     fill: none;
     stroke: none;
@@ -16,8 +17,9 @@
     stroke: #E4E4E4;
   }
 
-  svg{
-    padding-top: 80px;
+  svg {
+    padding: 90px;
+    padding-top: 110px;
   }
 
 </style>
@@ -26,9 +28,12 @@
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="//d3js.org/topojson.v1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
-<section id="intro">
-  <h1>Climate Representation in the United States Congress 2017</h1>
-</section>
+
+<div id="hook">
+  <section id="intro">
+    <h1>Climate Representation in the United States Congress 2017</h1>
+  </section>
+</div>
 <script>
 
   // Ratio of Obese (BMI >= 30) in U.S. Adults, CDC 2008
@@ -44,15 +49,15 @@
 
   var path = d3.geo.path();
 
-  var svg = d3.select("body").append("svg")
+  var svg = d3.select("#hook").append("svg")
           .attr("width", 960)
-          .attr("height", 500);
+          .attr("height", 700);
 
 
   d3.json('data.json', function (err, data) {
     var tip = d3.tip()
             .attr('class', 'd3-tip')
-            .offset([-20, 0])
+            .offset([0, 0])
             .html(function (d) {
               return "<strong>" + data[d.id]['state'] + "<br> </strong><span> Total congressional seats: " + data[d.id]['total'] +
                       "<br>Voted against climate change legislation: " + data[d.id]['vote'] +
@@ -92,6 +97,7 @@
                         y = centroid[1];
                 //console.log(d.id + " " + data[d.id]['state'] + " " + data[d.id]['ratio'] + " " + Math.sqrt(data[d.id]['ratio'] * 2));
                 var ratio = data[d.id]['ratio'];
+                console.log("x " + x + " y " + y);
                 return "translate(" + x + "," + y + ")"
                         + "scale(" + Math.sqrt(ratio * (1 + (20 * ratio)) || 0) + ")"
                         + "translate(" + -x + "," + -y + ")";
