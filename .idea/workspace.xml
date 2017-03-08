@@ -96,8 +96,8 @@
       <file leaf-file-name="p5testing.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/p5testing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+            <state relative-caret-position="390">
+              <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
               <folding>
                 <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -388,12 +388,12 @@
       <workItem from="1487461889207" duration="7000" />
       <workItem from="1487473742125" duration="2879000" />
       <workItem from="1488601369196" duration="5000" />
-      <workItem from="1488870264068" duration="3214000" />
+      <workItem from="1488870264068" duration="3827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142839000" />
+    <option name="totallyTimeSpent" value="143452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="752" y="-874" width="1453" height="710" extended-state="0" />
@@ -803,8 +803,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/p5testing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        <state relative-caret-position="390">
+          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
           <folding>
             <element signature="n#style#0;n#canvas#0;n#body#0;n#!!top" expanded="true" />
           </folding>
