@@ -837,12 +837,11 @@
     function createMedia(pInst, type, src, callback) {
         var elt = document.createElement(type);
 
-        var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-        if(iOS) {
-            elt.setAttribute("autoplay", "true");
-            elt.setAttribute("muted", "true");
-            elt.setAttribute("playsinline", "true");
-        }
+        // var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        // console.log(iOS);
+        elt.setAttribute("autoplay", "true");
+        elt.setAttribute("muted", "true");
+        elt.setAttribute("playsinline", "true");
 
         // allow src to be empty
         var src = src || '';
