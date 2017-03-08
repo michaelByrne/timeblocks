@@ -836,12 +836,11 @@
 
     function createMedia(pInst, type, src, callback) {
         var elt = document.createElement(type);
-
-        // var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-        // console.log(iOS);
         elt.setAttribute("autoplay", "true");
         elt.setAttribute("muted", "true");
         elt.setAttribute("playsinline", "true");
+        console.log(type);
+        console.log(elt);
 
         // allow src to be empty
         var src = src || '';
