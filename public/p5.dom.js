@@ -837,7 +837,7 @@
     function createMedia(pInst, type, src, callback) {
         var elt = document.createElement(type);
         elt.setAttribute("autoplay", "true");
-        elt.setAttribute("muted", "true");
+        //elt.setAttribute("muted", "true");
         elt.setAttribute("playsinline", "true");
 
         // allow src to be empty
