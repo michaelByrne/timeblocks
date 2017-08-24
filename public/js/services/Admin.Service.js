@@ -1,4 +1,4 @@
-angular.module('elkApp').service('AdminService', function($http, Word){
+angular.module('timeApp').service('AdminService', function($http, Word){
     this.post = function(uploadUrl, data){
         var fd = new FormData();
         for (var key in data){

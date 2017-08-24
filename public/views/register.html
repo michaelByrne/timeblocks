@@ -1,0 +1,12 @@
+<form ng-submit="authCtrl.register()">
+  <div class="input-group">
+    <input type="email" class="form-control" placeholder="Email" ng-model="authCtrl.user.email">
+  </div>
+  <div class="input-group">
+    <input type="password" class="form-control" placeholder="Password" ng-model="authCtrl.user.password">
+  </div>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Display name" ng-model="authCtrl.user.displayName">
+  </div>
+  <input type="submit" class="btn btn-default" value="Register">
+</form>

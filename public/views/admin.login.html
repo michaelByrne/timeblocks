@@ -1,0 +1,10 @@
+<div class="col-md-3 login" style="padding-left: 50px">
+  <h5 ng-hide="$ctrl.logged">should you be here?</h5>
+  <h5 ng-show="$ctrl.logged">sup</h5>
+  <button class="btn btn-primary" ng-hide="$ctrl.logged" ng-click="$ctrl.fbLogin()">login with facebook</button>
+  <button class="btn btn-primary" ng-show="$ctrl.logged" ng-click="$ctrl.fbLogOut()">logout</button>
+  <!--<button class="btn btn-primary" ng-click="$ctrl.anonLogin()">anony-mouse</button>-->
+  <br><br>
+  <div class="alert alert-danger" ng-show="!!$ctrl.errorMessage">{{ $ctrl.errorMessage }}</div>
+</div>
+

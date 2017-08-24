@@ -1,16 +1,15 @@
 
-* {
-    border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-}
 
 body {
-    padding-left: 50px;
     color: #959595;
+    font-family: 'Karla', sans-serif;
 }
 
-.container{
-    margin-left: inherit;
+.container {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 #top-bar {
@@ -18,7 +17,7 @@ body {
     margin-top: 15px;
 }
 
-#front-image{
+#front-image {
     padding-left: 60px;
 }
 
@@ -63,7 +62,6 @@ li {
 .btn-secondary.unchecked {
 
 }
-
 
 .editable-click {
     border-bottom: none;
@@ -143,3 +141,231 @@ label, select {
     float: right;
     margin-left: 1rem;
 }
+
+.reports {
+    padding-top: 20px;
+    background-color: lightgray;
+    max-width: 75%;
+    height: 100%;
+    color: #555555;
+}
+
+.requests {
+    padding-top: 20px;
+    padding-left: 75px;
+    max-width: 75%;
+    max-height: 75%;
+    color: #555555;
+}
+
+.control-label {
+    float: left;
+    font-size: 13px;
+    margin-left: 0;
+    margin-bottom: 2px;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.active {
+    color: gray;
+    pointer-events: none;
+}
+
+.print-request {
+    background-color: antiquewhite;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    margin: 4px;
+
+}
+
+.grid {
+    width: 700px;
+    height: 250px;
+    color: #222222;
+
+}
+
+.rq-list {
+    padding-top: 20px;
+    padding-left: 0px !important;
+    margin-left: 0;
+
+}
+
+.login {
+    padding-left: 75px;
+}
+
+.ngHeaderCell {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: black !important;
+}
+
+.ngTopPanel {
+    background-color: black;
+}
+
+.top-ar {
+    background-color: #003333;
+    height: 20px;
+    padding-top: 5px;
+    padding-bottom: 27px;
+
+}
+
+.navbar-top {
+    padding-left: 75px;
+    color: #DFFAFA;
+    font-size: 16px;
+    margin: 0;
+
+}
+
+.status-select {
+    height:20px;
+}
+
+a {
+    color: #90C6C6;
+}
+
+a .active {
+    color: lightgray;
+}
+
+.ui-grid-row:last-child > div > div > div {
+    border-bottom: 1px solid #ededed !important;
+}
+
+.navbar {
+    min-height: 0;
+}
+
+.collapse {
+    padding: 0;
+}
+
+.navbar.navbar-status-filter {
+    margin-bottom: 0px;
+    height: 40px;
+    width: 700px;
+    padding: 0px;
+    z-index: 0;
+    border: none;
+    box-shadow: none;
+}
+
+
+.status-field{
+    border-bottom: 1px  white !important;
+}
+
+.status-toggle{
+    background-color: #226666 !important;
+    color: #DFF4F4  !important;
+    font-size: 10pt !important;
+    width:105px;
+    opacity: .8;
+}
+
+.status-toggle.active{
+    background-color: #5E9999 !important;
+}
+
+.status-toggle:hover{
+    border: 2px solid darkgray;
+}
+
+.red
+{
+    background-color:#FFA8A3;
+}
+
+.green {
+    background-color: #80C8A7;
+}
+
+.yellow{
+    background-color: #fff4c2;
+
+}
+
+.blue{
+    background-color: #86C7EE;
+}
+
+
+/* Fix for Bootstrap 3 with Angular UI Bootstrap */
+
+.modal {
+    display: block;
+}
+
+.col-sm-1{
+
+    width: 40px !important;
+}
+/* Custom dialog/modal headers */
+
+.dialog-header-error { background-color: #d2322d; }
+.dialog-header-wait { background-color: #428bca; }
+.dialog-header-notify { background-color: #eeeeee; }
+.dialog-header-confirm { background-color: #333333; }
+.dialog-header-error span, .dialog-header-error h4,
+.dialog-header-wait span, .dialog-header-wait h4,
+.dialog-header-confirm span, .dialog-header-confirm h4 { color: #ffffff; }
+
+/* Ease Display */
+
+.pad { padding: 25px; }
+
+.status-actions {
+    padding-top: 90px;
+}
+
+
+.btn-circle {
+    height: 100px;
+    border-radius: 50% !important;
+}
+
+
+.nav-item{
+    margin-bottom: 0;
+}
+
+
+.round-button {
+    display:block;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border: 2px solid #f5f5f5;
+    border-radius: 50%;
+    color:#f5f5f5;
+    text-align:center;
+    text-decoration:none;
+    background: #464646;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+    margin-top: 2px;
+    opacity: .7;
+}
+.round-button:hover {
+    border: 2px solid darkgray;
+}
+
+.btn{
+    margin-bottom: 0;
+}
+

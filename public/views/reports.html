@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-1">
+      <div class="btn-group status-actions">
+        <button title="approve request" class="round-button" ng-click="$ctrl.acceptReq()"
+                style="background-color: #5cb85c"><span class="glyphicon glyphicon-thumbs-up"></span>
+        </button>
+        <button title="deny request" class="round-button" ng-click="$ctrl.denyReq()" style="background-color: #aa0000">
+          <span class="glyphicon glyphicon-thumbs-down"></span>
+        </button>
+        <button title="mark as scheduled" class="round-button" ng-click="$ctrl.scheduleReq()"
+                style="background-color: #00b3ee"><span class="glyphicon glyphicon-check"></span>
+        </button>
+        <button title="delete request" class="round-button" ng-click="$ctrl.deleteReq()"
+                style="background-color: red"><span
+                class="glyphicon glyphicon-trash"></span>
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-8 rq-list">
+      <div class="admin-panel">
+        <nav class="navbar navbar-status-filter z-depth-0 btn-group">
+          <div id="navbarNavAltMarkup">
+            <button class="nav-item nav-link btn btn-primary status-toggle" ng-click="$ctrl.toggleStatus('pending')"
+                    ng-class="{ active: $ctrl.isActive('pending')}">Pending
+            </button>
+            <button class="nav-item nav-link btn btn-primary status-toggle" ng-click="$ctrl.toggleStatus('accepted')"
+                    ng-class="{ active: $ctrl.isActive('accepted')}">Accepted
+            </button>
+            <button class="nav-item nav-link btn btn-primary status-toggle" ng-click="$ctrl.toggleStatus('denied')"
+                    ng-class="{ active: $ctrl.isActive('denied')}">Denied
+            </button>
+            <button class="nav-item nav-link btn btn-primary status-toggle" ng-click="$ctrl.toggleStatus('all')"
+                    ng-class="{ active: $ctrl.isActive('all')}">All
+            </button>
+          </div>
+
+        </nav>
+        <div id="grid1" ui-grid="$ctrl.gridOptions" ui-grid-selection ui-grid-edit="" ui-grid-row-edit=""
+             class="grid card"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-9">
+    <calendar-component></calendar-component>
+  </div>
+</div>
+</div>
+</div>
+

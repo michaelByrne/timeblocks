@@ -1,0 +1,25 @@
+<div ng-if="!$ctrl.success" class="card">
+  <div class="card-block">
+    <h4>New Timeoff Request</h4>
+    <div style="padding-bottom: 5px;color: darkslategray">Logged in as <span style="color:gray">{{$ctrl.user.displayName}}</span>
+    </div>
+    <form ng-submit="$ctrl.onSubmit($ctrl.user)">
+      <form novalidate>
+        <formly-form model="$ctrl.request" fields="$ctrl.requestFields" form="$ctrl.requestForm">
+          <button type="submit" class="btn btn-primary" ng-disabled="$ctrl.requestForm.$invalid">Submit</button>
+          <button type="button" class="btn btn-primary" ng-click="$ctrl.fbLogOut()">Logoff</button>
+        </formly-form>
+      </form>
+    </form>
+  </div>
+</div>
+<div ng-if="$ctrl.success">
+  <div>
+    The following request has been submitted. A confirmation has been sent to your email at {{$ctrl.user.email}}.
+  </div>
+  <br>
+  <div style="background-color: lightblue;padding: 3px">
+    <span>start: {{$ctrl.request.start.toString().substring(0,10)}} &nbsp;&nbsp;    end: {{$ctrl.request.end.toString().substring(0,10)}}</span>
+    <br> <span>reason: {{$ctrl.request.reason}}</span>
+  </div>
+</div>

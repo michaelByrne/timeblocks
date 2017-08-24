@@ -1,3 +1,3 @@
-angular.module('elkApp').factory('auth', function($firebaseAuth, rootRef) {
+angular.module('timeApp').factory('auth', function($firebaseAuth, rootRef) {
     return $firebaseAuth();
 })

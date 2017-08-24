@@ -1,4 +1,4 @@
-angular.module('elkApp').directive('fileModel', ['$parse', function($parse){
+angular.module('timeApp').directive('fileModel', ['$parse', function($parse){
     return{
         restric: 'A',
         link: function(scope, element, attrs){

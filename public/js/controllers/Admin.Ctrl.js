@@ -1,4 +1,4 @@
-angular.module('elkApp').controller('AdminController', function ($scope, Word, AdminService) {
+angular.module('timeApp').controller('AdminController', function ($scope, Word, AdminService) {
     $scope.story = {};
     $scope.submit = function(){
         var uploadUrl = '/stories/upload';
